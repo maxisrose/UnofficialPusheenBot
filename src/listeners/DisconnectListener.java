@@ -13,6 +13,6 @@ public class DisconnectListener extends ListenerAdapter {
 		Date now = new Date();
 		SimpleDateFormat hms = new SimpleDateFormat("hh:mm:ss");
 		System.out.println("I have disconnected at "+hms.format(now));
-		e.getJDA().getTextChannelById("254027186644713472").sendMessage("Looks like I disconnected for a sec there, but I'm back now").queue();
+		//e.getJDA().getTextChannelById("254027186644713472").sendMessage("Looks like I disconnected for a sec there, but I'm back now").queue();
 	}
 }

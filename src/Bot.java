@@ -50,7 +50,7 @@ public static void main(String[] args) {
 	
 	if(cmnd.nextInt() == 0){
 		System.out.println("Shutting Down");
-		jda.getTextChannelById("254027186644713472").sendMessage("I think it's time for a cat nap\nSee you later Everyone!").queue();
+		jda.getTextChannelById("254027186644713472").sendMessage("Goodnight all").queue();
 		jda.shutdown();
 		//System.exit(0);
 	}

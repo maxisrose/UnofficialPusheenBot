@@ -17,6 +17,7 @@ public class MessageListener extends ListenerAdapter {
 		Search search = new Search(e.getMessage().getRawContent());
 		//System.out.println(e.getMessage().getRawContent().equalsIgnoreCase("286604459822284800"));
 		//System.out.println(e.getAuthor().toString().equalsIgnoreCase("U:Pusheen(284463578679869440)"));
+		
 		/* Quick escape to check if pusheen sent the message*/
 		if(e.getAuthor().toString().equalsIgnoreCase("U:Pusheen(284463578679869440)")){
 			//System.out.println("I sent this message");
@@ -28,13 +29,24 @@ public class MessageListener extends ListenerAdapter {
 			
 			System.out.println("Message Recieved");
 
-			e.getChannel().sendMessage("Looks like you need help "+e.getAuthor().getAsMention()+"!\nYou can tell me what to do, my commands are: ```"
+			e.getChannel().sendMessage("Looks like you need help "+e.getAuthor().getAsMention()+"!\nI am Pusheen the Meme Machine\nYou can tell me what to do, my commands are: ```"
 					+ "+hello  --A friendly greeting\n"
 					+ "+goodnight  --Someone cares <3\n"
+					+ "+morning  --Good Morning\n"
 					+ "+bacon  --Summons forth Bacon Pancakes!\n"
 					+ "+one  --How to be a villian\n"
 					+ "+bad  --UNACCEPTABLE\n"
-					+ "+star  --You might see a shooting star"
+					+ "+star  --You might see a shooting star\n"
+					+ "+men  --It's raining\n"
+					+ "+hats  --They are worn\n"
+					+ "+alive  --Still Alive\n"
+					+ "+radio  --Do doot do doo doo\n"
+					+ "+sad  --Aww\n"
+					+ "\nPusheen Pictures\n"
+					+ "-sad\n"
+					+ "-ded\n"
+					+ "-like\n"
+					+ "-tear"
 					+ "```Check back for new commands\nIf you want me to do something special tell Ross to teach me").queue();
 		}//close help
 		
@@ -42,7 +54,7 @@ public class MessageListener extends ListenerAdapter {
 			
 			System.out.println("Message Recieved");
 
-			e.getChannel().sendMessage("Is there something you need "+e.getAuthor().getAsMention()+"?\nI will tell you my commands if you send```+help or +cmnds```").queue();
+			e.getChannel().sendMessage("You call upon Pusheen the Meme Machine, "+e.getAuthor().getAsMention()+"?\nI will tell you my commands if you send```+help or +cmnds```").queue();
 		}//close help
 		
 		/*Used for testing sent messages*/
@@ -51,7 +63,7 @@ public class MessageListener extends ListenerAdapter {
 		}//close test
 
 //------------------------------ Conversation ------------------------------
-		else if(e.getMessage().getRawContent().equalsIgnoreCase("+hello") || e.getMessage().getRawContent().equalsIgnoreCase("hello") || search.wordExists("hello everyone") || search.wordExists("hello all")){
+		else if(e.getMessage().getRawContent().equalsIgnoreCase("+hello") || e.getMessage().getRawContent().equalsIgnoreCase("hello") || search.wordExists("hello everyone") || search.wordExists("hello all") || e.getMessage().getRawContent().equalsIgnoreCase("hello?")){
 			
 			e.getChannel().sendMessage("Hello "+ e.getAuthor().getAsMention()).queue();
 			
@@ -86,6 +98,11 @@ public class MessageListener extends ListenerAdapter {
 			System.out.println("Message Recieved");
 			
 		}//close Goodnight
+		
+		else if(e.getMessage().getRawContent().equalsIgnoreCase("+sad")){
+			e.getChannel().sendMessage("Awwww, don't be sad, "+e.getAuthor().getAsMention()+"\nI love you :3").queue();
+			System.out.println("Message Recieved");
+		}//close sad
 		
 //------------------------------ Video Links ------------------------------
 		
@@ -138,7 +155,8 @@ public class MessageListener extends ListenerAdapter {
 					"https://www.youtube.com/watch?v=SEni9Lb7Vh0",
 					"They be killin Krillin\nhttps://www.youtube.com/watch?v=8Ov9puNLiTw",
 					"https://www.youtube.com/watch?v=7dwLCHNdqWw",
-					"https://www.youtube.com/watch?v=feA64wXhbjo"
+					"https://www.youtube.com/watch?v=feA64wXhbjo",
+					"https://www.youtube.com/watch?v=d7qLCbA3wCA"
 			};
 			int vid = rand.nextInt(vids.length);
 			
@@ -147,6 +165,74 @@ public class MessageListener extends ListenerAdapter {
 			System.out.println("Message Recieved");
 			
 		}//close star
+		
+		else if(e.getMessage().getRawContent().equalsIgnoreCase("+men")){
+			e.getChannel().sendMessage("It's raining\nhttps://www.youtube.com/watch?v=NmJNSlN_OB4").queue();
+			System.out.println("Message Recieved");
+		}//close men
+		
+		else if(e.getMessage().getRawContent().equalsIgnoreCase("+hats")){
+			
+			Random rand = new Random();
+			String[] vids = new String[]{
+					"https://www.youtube.com/watch?v=kZUPCB9533Y",
+					"https://www.youtube.com/watch?v=ZpjyH-LkEAg",
+					"https://www.youtube.com/watch?v=49j6_uk0g3k",
+					"https://www.youtube.com/watch?v=SJixW2u4IvQ",
+					"https://www.youtube.com/watch?v=71iZieJWmmk",
+					"https://www.youtube.com/watch?v=kVzaBq4ycWg",
+					"https://www.youtube.com/watch?v=4s9-sJwNz2c",
+					"https://www.youtube.com/watch?v=kHDghTE7Llo",
+					"https://www.youtube.com/watch?v=RYqBDTsHZsQ",
+					"https://www.youtube.com/watch?v=cyv-gSJvWpU",
+					"https://www.youtube.com/watch?v=C_-zC2qcx4M",
+					"https://www.youtube.com/watch?v=QXI0u3qyFqA",
+					"https://www.youtube.com/watch?v=jJOwdrTA8Gw"
+			};
+			int vid = rand.nextInt(vids.length);
+			
+			e.getChannel().sendMessage("Look! Llamas!\n"+vids[vid]).queue();
+			
+			System.out.println("Message Recieved");
+			
+		}//close hats
+		else if(e.getMessage().getRawContent().equalsIgnoreCase("+alive")){
+			e.getChannel().sendMessage("He lives on... ;_; ...in our hearts\nhttps://www.youtube.com/watch?v=HauOgTszzz4").queue();
+			System.out.println("Message Recieved");
+		}//close alive
+		
+		else if(e.getMessage().getRawContent().equalsIgnoreCase("+morning") || e.getMessage().getRawContent().equalsIgnoreCase("Good morning")){
+			e.getChannel().sendMessage("Good Morning!\nhttps://www.youtube.com/watch?v=Xzsc785E27g").queue();
+			System.out.println("Message Recieved");
+		}//close morning
+		
+		else if(e.getMessage().getRawContent().equalsIgnoreCase("+radio")){
+			e.getChannel().sendMessage("https://www.youtube.com/watch?v=qF1xinXOHXE").queue();
+			System.out.println("Message Recieved");
+		}
+		
+//------------------------------ Pusheen Pictures ------------------------------
+
+		else if(e.getMessage().getRawContent().equalsIgnoreCase("-sad")){
+			
+			System.out.println("Message Recieved");
+		}//close sad
+		
+		else if(e.getMessage().getRawContent().equalsIgnoreCase("-ded")){
+			
+			System.out.println("Message Recieved");
+		}//close ded
+		
+		else if(e.getMessage().getRawContent().equalsIgnoreCase("-like")){
+			
+			System.out.println("Message Recieved");
+		}//close like
+		
+		else if(e.getMessage().getRawContent().equalsIgnoreCase("-tear")){
+			
+			System.out.println("Message Recieved");
+		}//close tear
+		
 		
 	}//close onMessageRecieved
 	
