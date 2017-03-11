@@ -42,11 +42,13 @@ public class MessageListener extends ListenerAdapter {
 					+ "+alive  --Still Alive\n"
 					+ "+radio  --Do doot do doo doo\n"
 					+ "+sad  --Aww\n"
-					+ "\nPusheen Pictures\n"
+					+ "\n----Post Pusheen Pictures----\n"
 					+ "-sad\n"
 					+ "-ded\n"
 					+ "-like\n"
-					+ "-tear"
+					+ "-tear\n"
+					+ "-bored\n"
+					+ "-dance"
 					+ "```Check back for new commands\nIf you want me to do something special tell Ross to teach me").queue();
 		}//close help
 		
@@ -64,8 +66,16 @@ public class MessageListener extends ListenerAdapter {
 
 //------------------------------ Conversation ------------------------------
 		else if(e.getMessage().getRawContent().equalsIgnoreCase("+hello") || e.getMessage().getRawContent().equalsIgnoreCase("hello") || search.wordExists("hello everyone") || search.wordExists("hello all") || e.getMessage().getRawContent().equalsIgnoreCase("hello?")){
+			/*
+			Random rand = new Random();
+			String[] his = new String[]{
+					"http://scontent.cdninstagram.com/t51.2885-15/s480x480/e15/11055544_1408635222778336_2119058558_n.jpg?ig_cache_key=OTQxMDI0NTcwNjY4NTYyMTE3.2",
+					""
+			};
+			int hi = rand.nextInt(his.length);
+			*/
 			
-			e.getChannel().sendMessage("Hello "+ e.getAuthor().getAsMention()).queue();
+			e.getChannel().sendMessage("Hello "+ e.getAuthor().getAsMention()+"\nhttp://scontent.cdninstagram.com/t51.2885-15/s480x480/e15/11055544_1408635222778336_2119058558_n.jpg?ig_cache_key=OTQxMDI0NTcwNjY4NTYyMTE3.2").queue();
 			
 			System.out.println("Message Recieved");
 			
@@ -214,25 +224,35 @@ public class MessageListener extends ListenerAdapter {
 //------------------------------ Pusheen Pictures ------------------------------
 
 		else if(e.getMessage().getRawContent().equalsIgnoreCase("-sad")){
-			
+			e.getChannel().sendMessage("https://kittybloger.files.wordpress.com/2012/01/2_sadness.gif").queue();
 			System.out.println("Message Recieved");
 		}//close sad
 		
 		else if(e.getMessage().getRawContent().equalsIgnoreCase("-ded")){
-			
+			e.getChannel().sendMessage("https://s-media-cache-ak0.pinimg.com/564x/41/28/ea/4128ea37c8a7a51c475e7a3dd0516be1.jpg").queue();
 			System.out.println("Message Recieved");
 		}//close ded
 		
 		else if(e.getMessage().getRawContent().equalsIgnoreCase("-like")){
-			
+			e.getChannel().sendMessage("https://s-media-cache-ak0.pinimg.com/236x/4c/7b/a7/4c7ba71c9f716854340abe5fb6caf53a.jpg").queue();
 			System.out.println("Message Recieved");
 		}//close like
 		
 		else if(e.getMessage().getRawContent().equalsIgnoreCase("-tear")){
-			
+			e.getChannel().sendMessage("https://scontent-amt2-1.cdninstagram.com/t51.2885-15/e35/13722008_580737315447857_210459553_n.jpg").queue();
 			System.out.println("Message Recieved");
 		}//close tear
 		
+		else if(e.getMessage().getRawContent().equalsIgnoreCase("-bored") || e.getMessage().getRawContent().equalsIgnoreCase("bored")){
+			e.getChannel().sendMessage("https://lh5.googleusercontent.com/-Va0MFXnt5g4/UxzwIuRScuI/AAAAAAAAAKg/V9BH3q8dSXI/w960-h640/Pusheen%2Bcat%2Bupside%2Bdown.jpg").queue();
+			System.out.println("Message Recieved");
+		}//close bored
+		
+		else if(e.getMessage().getRawContent().equalsIgnoreCase("-dance")){
+			e.getChannel().sendMessage("https://www.google.com/search?q=dont+be+sad+pusheen&rlz=1C1AVFC_enUS731US731&espv=2&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiO7oCQ_83SAhUFyGMKHSBUD-sQ_AUIBigB&biw=1440&bih=794#q=pusheen+wave&tbm=isch&tbs=itp:animated&*&imgrc=u5Jo9fB-QCJiOM:").queue();
+			//https://www.google.com/search?q=dont+be+sad+pusheen&rlz=1C1AVFC_enUS731US731&espv=2&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiO7oCQ_83SAhUFyGMKHSBUD-sQ_AUIBigB&biw=1440&bih=794#tbs=itp:animated&tbm=isch&q=pusheen+waves&*&imgrc=aLM0xnKo0VL-jM:
+			System.out.println("Message Recieved");			
+		}//close dance
 		
 	}//close onMessageRecieved
 	
