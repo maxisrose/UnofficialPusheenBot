@@ -249,7 +249,7 @@ public class MessageListener extends ListenerAdapter {
 		}//close bored
 		
 		else if(e.getMessage().getRawContent().equalsIgnoreCase("-dance")){
-			e.getChannel().sendMessage("https://www.google.com/search?q=dont+be+sad+pusheen&rlz=1C1AVFC_enUS731US731&espv=2&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiO7oCQ_83SAhUFyGMKHSBUD-sQ_AUIBigB&biw=1440&bih=794#q=pusheen+wave&tbm=isch&tbs=itp:animated&*&imgrc=u5Jo9fB-QCJiOM:").queue();
+			e.getChannel().sendMessage("https://lh3.googleusercontent.com/-uNaExAzj2Xs/Vp9foiVBfKI/AAAAAAAAAPU/bKVays_KK3I/w350-h300-n/635690649303963453-11018521_pusheen%2Bdoing%2Bthe%2Bwave.gif").queue();
 			//https://www.google.com/search?q=dont+be+sad+pusheen&rlz=1C1AVFC_enUS731US731&espv=2&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiO7oCQ_83SAhUFyGMKHSBUD-sQ_AUIBigB&biw=1440&bih=794#tbs=itp:animated&tbm=isch&q=pusheen+waves&*&imgrc=aLM0xnKo0VL-jM:
 			System.out.println("Message Recieved");			
 		}//close dance

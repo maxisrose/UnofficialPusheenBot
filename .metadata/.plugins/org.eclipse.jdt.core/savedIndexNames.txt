@@ -1,0 +1,1 @@
+INDEX VERSION 1.130+E:\Max\Bots\UnofficialPusheenBot\.metadata\.plugins\org.eclipse.jdt.core

@@ -21,11 +21,11 @@ public static void main(String[] args) {
 //---------------------- Listeners ----------------------
 	
 	builder.setToken(BOT_TOKEN);
-	builder.addListener(new ReadyListener());
-	builder.addListener(new MessageListener());
-	builder.addListener(new ReconnectListener());
-	builder.addListener(new DisconnectListener());
-	builder.addListener(new ResumeListener());
+	builder.addEventListener(new ReadyListener());
+	builder.addEventListener(new MessageListener());
+	builder.addEventListener(new ReconnectListener());
+	builder.addEventListener(new DisconnectListener());
+	builder.addEventListener(new ResumeListener());
 	
 	try {
 		jda = builder.buildBlocking();

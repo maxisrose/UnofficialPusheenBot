@@ -12,7 +12,7 @@ public class ReadyListener extends ListenerAdapter {
 		//System.out.println(e.getJDA().getTextChannels());
 		System.out.println("I am online");
 		//e.getChannel().sendMessage("Hello "+ e.getAuthor().getAsMention()).queue();
-		//e.getJDA().getTextChannelById("254027186644713472").sendMessage("*yawn* that was a good cat nap, I'm back ;3").queue();
+		e.getJDA().getTextChannelById("254027186644713472").sendMessage("I'm back, baby!").queue();
 		//System.out.println(e.getJDA().getUsers());
 
 		System.out.println();
